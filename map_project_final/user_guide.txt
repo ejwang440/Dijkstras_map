@@ -1,0 +1,5 @@
+User Guide:
+
+This program was created by Emmanuelle Brindamour, Colin Jung, and Ellie Wang. It is an adaptation of Google Maps for the North side of PEA campus. 
+
+Simply click on your beginning point, then click on the destination. The program will run and give you the shortest path and how long it takes to get there. A path will also be drawn on the screen. 
