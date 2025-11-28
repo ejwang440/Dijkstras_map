@@ -105,23 +105,6 @@ void draw()
        text(buildings[i].bldgName, buildings[i].xCoordinate, buildings[i].yCoordinate, 300, 100);
      }
    }
-   
-   /*line(child.building.xCoordinate, child.building.yCoordinate, parent.building.yCoordinate, parent.building.xCoordinate);
-   stroke(0);
-   strokeWeight(4);*/
-     
-  /*fill(192,0); //void
-  noStroke();
-  rect(380, 583, 10, 90);
-  pushMatrix();
-  // move the origin to the pivot point
-  translate(380, 583); 
-  // then pivot the grid
-  rotate(radians(-118));
-  // and draw the square at the origin
-  fill(200,0,0);
-  rect(0, 0, 10, 90);
-  popMatrix();*/
   
   if(ppath.indexOf("EPAC -> Academy_Building")>-1||ppath.indexOf("Academy_Building -> EPAC")>-1){
   fill(192,0); //epac to academy
@@ -512,3 +495,4 @@ void mouseClicked(){
        }
   }
 }
+
