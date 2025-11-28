@@ -112,12 +112,6 @@ public class GraphWeighted {
 
       start.visit();
       
-      /*public void drawPath(Location building, NodeWeighted child, NodeWeighted parent) {
-        line(child.building.xCoordinate, child.building.yCoordinate, parent.building.yCoordinate, parent.building.xCoordinate);
-        stroke(0);
-        strokeWeight(4);
-      }*/
-      
       // This loop runs as long as there is an unvisited node that we can
       // reach from any of the nodes we could till then
       while (true) {
@@ -136,13 +130,8 @@ public class GraphWeighted {
                                      + start.name + " to " + end.name + " is:");
 
               NodeWeighted child = end;
-
-              // It makes no sense to use StringBuilder, since
-              // repeatedly adding to the beginning of the string
-              // defeats the purpose of using StringBuilder
               String path = end.name;
-              
-              /*Location[] pathArray = new Location[19];*/
+
               
               while (true) {
                   NodeWeighted parent = changedAt.get(child);
@@ -154,12 +143,6 @@ public class GraphWeighted {
                   // in order to print the path we need to add the parent before the child and
                   // it's descendants
                   path = parent.name + " -> " + path;
-                  
-                  
-                  /*for (int k = 0; k<19; k++) {
-                    if (pathArray[k] == null) 
-                      pathArray[k] = parent.building;
-                  }*/
                   
                   child = parent;
               }
@@ -216,4 +199,5 @@ public class GraphWeighted {
       return closestReachableNode;
   }
 }
+
 
