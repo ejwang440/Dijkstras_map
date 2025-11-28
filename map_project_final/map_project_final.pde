@@ -486,13 +486,18 @@ void mouseClicked(){
        System.out.println("Beginning: " + buildings[a].bldgName);
        beginning = buildings[a].node;
         }
-        if (clickcount == 2){
-       System.out.println("Destination: " + buildings[a].bldgName);
-       destination = buildings[a].node;
-
-          graphWeighted.DijkstraShortestPath(beginning, destination);
-        }
+    if (clickcount == 2) {
+        System.out.println("Destination: " + buildings[a].bldgName);
+        destination = buildings[a].node;
+    
+        graphWeighted.DijkstraShortestPath(beginning, destination);
+    
+        // Reset here so user can choose a new start/destination
+        clickcount = 0;
+        graphWeighted.resetNodesVisited();
        }
+    }
   }
 }
+
 
